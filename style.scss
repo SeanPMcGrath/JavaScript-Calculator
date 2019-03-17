@@ -1,0 +1,125 @@
+$c-numbers: #E7F7D4;
+$c-operators: #528EFF;
+$c-display: #E7F7D4;
+$c-clear: #FD4D0C;
+$c-clearCurrent: #FF9E7A;
+$c-equal: #1258DC;
+$c-background: lightyellow;
+
+@mixin itemPosition($gcs, $gce, $grs, $gre) {
+  grid-column-start: $gcs;
+  grid-column-end: $gce;
+  grid-row-start: $grs;
+  grid-row-end: $gre;
+}
+
+body {
+  background: $c-background;
+}
+
+#calculator {
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 300px;
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: repeat(4, auto);
+  border: solid;
+  padding: 0;
+}
+
+.display {
+  height: 35px;
+  width: 100%;
+  display: block;
+  margin: 0px;
+  background-color: $c-display;
+  border: none;
+}
+
+button {
+  height: 60px;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0px;
+}
+
+.number {
+  background: $c-numbers;
+}
+
+.operator {
+  background: $c-operators
+}
+
+/*Operator positions are currently forced into where they are by the positions of the other buttons and their order in the html*/
+#display {
+  @include itemPosition(1, 5, 1, 2);
+}
+
+#processDisplay {
+  @include itemPosition(1, 5, 2, 3);
+}
+
+#clear {
+  @include itemPosition(1, 3, 3, 4);
+  background: $c-clear;
+}
+
+#clearCurrent {
+  @include itemPosition(3, 4, 3, 4);
+  background: $c-clearCurrent;
+}
+
+#nine {
+  @include itemPosition(3, 4, 4, 5);
+}
+
+#eight {
+  @include itemPosition(2, 3, 4, 5);
+}
+
+#seven {
+  @include itemPosition(1, 2, 4, 5);
+}
+
+#six {
+  @include itemPosition(3, 4, 5, 6);
+}
+
+#five {
+  @include itemPosition(2, 3, 5, 6);
+}
+
+#four {
+  @include itemPosition(1, 2, 5, 6);
+}
+
+#three {
+  @include itemPosition(3, 4, 6, 7);
+}
+
+#two {
+  @include itemPosition(2, 3, 6, 7);
+}
+
+#one {
+  @include itemPosition(1, 2, 6, 7);
+}
+
+#zero {
+  @include itemPosition(1, 2, 7, 8);
+}
+
+#decimal {
+  @include itemPosition(2, 3, 7, 8);
+}
+
+#equals {
+  @include itemPosition(3, 5, 7, 8);
+  background: $c-equal
+}
+
+
+
