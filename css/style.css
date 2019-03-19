@@ -1,0 +1,155 @@
+body {
+  background: blue;
+}
+
+#calculator {
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 300px;
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: repeat(4, auto);
+  border: solid;
+  padding: 0;
+}
+
+.display {
+  height: 35px;
+  width: 100%;
+  display: block;
+  margin: 0px;
+  background-color: #e7f7d4;
+  border: none;
+}
+
+button {
+  height: 60px;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0px;
+}
+
+.number {
+  background: #e7f7d4;
+}
+
+.operator {
+  background: #528eff;
+}
+
+/*Operator positions are currently forced into where they are by the positions of the other buttons and their order in the html*/
+#display {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#processDisplay {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#clear {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background: #fd4d0c;
+}
+
+#clearCurrent {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background: #ff9e7a;
+}
+
+#nine {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+#eight {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+#seven {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+#six {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+#five {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+#four {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+#three {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
+
+#two {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
+
+#one {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
+
+#zero {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 7;
+  grid-row-end: 8;
+}
+
+#decimal {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 7;
+  grid-row-end: 8;
+}
+
+#equals {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 7;
+  grid-row-end: 8;
+  background: #1258dc;
+}

@@ -1,10 +1,10 @@
-$c-numbers: #E7F7D4;
-$c-operators: #528EFF;
-$c-display: #E7F7D4;
-$c-clear: #FD4D0C;
-$c-clearCurrent: #FF9E7A;
-$c-equal: #1258DC;
-$c-background: lightyellow;
+$c-numbers: #e7f7d4;
+$c-operators: #528eff;
+$c-display: #e7f7d4;
+$c-clear: #fd4d0c;
+$c-clearCurrent: #ff9e7a;
+$c-equal: #1258dc;
+$c-background: black;
 
 @mixin itemPosition($gcs, $gce, $grs, $gre) {
   grid-column-start: $gcs;
@@ -50,7 +50,7 @@ button {
 }
 
 .operator {
-  background: $c-operators
+  background: $c-operators;
 }
 
 /*Operator positions are currently forced into where they are by the positions of the other buttons and their order in the html*/
@@ -118,8 +118,5 @@ button {
 
 #equals {
   @include itemPosition(3, 5, 7, 8);
-  background: $c-equal
+  background: $c-equal;
 }
-
-
-
