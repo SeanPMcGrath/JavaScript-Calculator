@@ -1,3 +1,3 @@
-A Pen created at CodePen.io. You can find this one at https://codepen.io/SeanPMcGrath/pen/zbNyBx.
+Basic arithmatic calculator which shows in process calculations and doesn't allow inputs that would cause an error
 
- 
+https://seanpmcgrath.github.io/JavaScript-Calculator/
