@@ -1,6 +1,10 @@
+/*Alternate colors
+e7f7d4 light green
+c9eab3 slightly darker green
+56932a darker green
+*/
 body {
-  background: blue;
-}
+  background: #56932a; }
 
 #calculator {
   margin-top: 40px;
@@ -11,145 +15,141 @@ body {
   grid-gap: 0px;
   grid-template-columns: repeat(4, auto);
   border: solid;
-  padding: 0;
-}
+  padding: 0; }
 
 .display {
   height: 35px;
   width: 100%;
   display: block;
   margin: 0px;
+  color: black;
   background-color: #e7f7d4;
-  border: none;
-}
+  border: none; }
+
+#processDisplay {
+  border-bottom: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #e7f7d4; }
 
 button {
   height: 60px;
-  border: 0;
+  border: solid;
+  border-width: 1px;
+  border-color: #e7f7d4;
   box-shadow: none;
   border-radius: 0px;
-}
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s; }
+
+button:hover {
+  filter: brightness(90%); }
 
 .number {
-  background: #e7f7d4;
-}
+  background: #e7f7d4; }
 
 .operator {
-  background: #528eff;
-}
+  background: #e7f7d4; }
 
 /*Operator positions are currently forced into where they are by the positions of the other buttons and their order in the html*/
 #display {
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 1;
-  grid-row-end: 2;
-}
+  grid-row-end: 2; }
 
 #processDisplay {
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 2;
-  grid-row-end: 3;
-}
+  grid-row-end: 3; }
 
 #clear {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 3;
   grid-row-end: 4;
-  background: #fd4d0c;
-}
+  background: #e7f7d4; }
 
 #clearCurrent {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 3;
   grid-row-end: 4;
-  background: #ff9e7a;
-}
+  background: #e7f7d4; }
 
 #nine {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 4;
-  grid-row-end: 5;
-}
+  grid-row-end: 5; }
 
 #eight {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 4;
-  grid-row-end: 5;
-}
+  grid-row-end: 5; }
 
 #seven {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 4;
-  grid-row-end: 5;
-}
+  grid-row-end: 5; }
 
 #six {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 5;
-  grid-row-end: 6;
-}
+  grid-row-end: 6; }
 
 #five {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 5;
-  grid-row-end: 6;
-}
+  grid-row-end: 6; }
 
 #four {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 5;
-  grid-row-end: 6;
-}
+  grid-row-end: 6; }
 
 #three {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 6;
-  grid-row-end: 7;
-}
+  grid-row-end: 7; }
 
 #two {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 6;
-  grid-row-end: 7;
-}
+  grid-row-end: 7; }
 
 #one {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 6;
-  grid-row-end: 7;
-}
+  grid-row-end: 7; }
 
 #zero {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 7;
-  grid-row-end: 8;
-}
+  grid-row-end: 8; }
 
 #decimal {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 7;
-  grid-row-end: 8;
-}
+  grid-row-end: 8; }
 
 #equals {
   grid-column-start: 3;
   grid-column-end: 5;
   grid-row-start: 7;
   grid-row-end: 8;
-  background: #1258dc;
-}
+  background: #e7f7d4; }
+
+@media (max-width: 400px) {
+  #calculator {
+    margin-top: 0; } }

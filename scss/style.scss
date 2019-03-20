@@ -1,10 +1,19 @@
 $c-numbers: #e7f7d4;
-$c-operators: #528eff;
+$c-operators: #e7f7d4;
 $c-display: #e7f7d4;
-$c-clear: #fd4d0c;
-$c-clearCurrent: #ff9e7a;
-$c-equal: #1258dc;
-$c-background: black;
+$c-clear: #e7f7d4;
+$c-clearCurrent: #e7f7d4;
+$c-equal: #e7f7d4;
+$c-background: #56932a;
+$c-button-border: #e7f7d4;
+$c-under-display: #e7f7d4;
+$c-display-text: black;
+
+/*Alternate colors
+e7f7d4 light green
+c9eab3 slightly darker green
+56932a darker green
+*/
 
 @mixin itemPosition($gcs, $gce, $grs, $gre) {
   grid-column-start: $gcs;
@@ -34,15 +43,30 @@ body {
   width: 100%;
   display: block;
   margin: 0px;
+  color: $c-display-text;
   background-color: $c-display;
   border: none;
 }
 
+#processDisplay {
+  border-bottom: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: $c-under-display;
+}
+
 button {
   height: 60px;
-  border: 0;
+  border: solid;
+  border-width: 1px;
+  border-color: $c-button-border;
   box-shadow: none;
   border-radius: 0px;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+
+button:hover {
+  filter: brightness(90%);
 }
 
 .number {
@@ -119,4 +143,10 @@ button {
 #equals {
   @include itemPosition(3, 5, 7, 8);
   background: $c-equal;
+}
+
+@media (max-width: 400px) {
+  #calculator {
+    margin-top: 0;
+  }
 }
